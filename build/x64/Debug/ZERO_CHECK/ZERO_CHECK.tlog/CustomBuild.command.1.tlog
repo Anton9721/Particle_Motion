@@ -1,0 +1,10 @@
+^C:\USERS\АНТОН\DESKTOP\МИФИ\4 КУРС\MY_PROJECT\BUILD\CMAKEFILES\A4FCE353B764DF6C15533D6C60DF85E5\GENERATE.STAMP.RULE
+setlocal
+D:\CMake\bin\cmake.exe "-SC:/Users/Антон/Desktop/МИФИ/4 курс/My_project" "-BC:/Users/Антон/Desktop/МИФИ/4 курс/My_project/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/Антон/Desktop/МИФИ/4 курс/My_project/build/ParticleMotion.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
