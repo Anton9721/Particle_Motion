@@ -32,24 +32,6 @@ void WriterTXT::write(std::span<Particle> particles, double t)
     file << "\n";
 }
 
-std::vector<double> WriterPyhton::writer_numpy(std::span<Particle> particles, double t)
-{
-    std::vector<double> data_result_part;
-    for (const auto &particle : particles)
-    {
-        data_result_part.push_back(t);
-        data_result_part.push_back(particle.position.x);
-        data_result_part.push_back(particle.position.y);
-        data_result_part.push_back(particle.position.z);
-        data_result_part.push_back(particle.velocity.x);
-        data_result_part.push_back(particle.velocity.y);
-        data_result_part.push_back(particle.velocity.z);
-    }
-
-
-    return data_result_part;
-}
-
 WriterSpectrum::WriterSpectrum(std::string &filename)
 {
     file = std::ofstream(filename);
