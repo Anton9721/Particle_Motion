@@ -25,15 +25,6 @@ public:
     void write(std::span<Particle> particles, double t) override;
 };
 
-// Вывод в numpy массив
-class WriterPyhton
-{
-public:
-    virtual ~WriterPyhton() {}
-
-    std::vector<double> writer_numpy(std::span<Particle> particles, double t);
-};
-
 // Запись в файл txt времени, позиции и скорости
 class WriterTXT : public Writer
 {
